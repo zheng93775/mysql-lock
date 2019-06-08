@@ -5,6 +5,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
+ * System.getProperty()的包装类
+ * 无对应配置的时候不抛出异常，返回默认值或者null
+ *
  * Created by zheng93775 on 2019/6/4.
  */
 class SystemProperty {

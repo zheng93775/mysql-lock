@@ -44,15 +44,13 @@ public class MLockTest {
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     } finally {
-                        boolean unlockResult = mLock.unlock();
-                        if (unlockResult) {
-                            int ms = random.nextInt(10000);
-                            System.out.println("thread " + number + " unlock and sleep " + ms + " ms");
-                            try {
-                                Thread.sleep(ms);
-                            } catch (InterruptedException e) {
-                                e.printStackTrace();
-                            }
+                        mLock.unlock();
+                        int ms = random.nextInt(5000);
+                        System.out.println("thread " + number + " unlock and sleep " + ms + " ms");
+                        try {
+                            Thread.sleep(ms);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
                         }
                     }
                 }
