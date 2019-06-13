@@ -85,6 +85,7 @@ public class MLock implements Lock {
      * 尝试获取锁
      * @return 返回true代表已经获得锁，false代表获取锁失败（锁已经被别的进程占有）
      */
+    @Override
     public boolean tryLock() {
         ownerThreadLocal.set(MLockManager.OPERATION_TRY_LOCK);
         String owner = UUID.randomUUID().toString();
