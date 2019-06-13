@@ -13,13 +13,21 @@ mysql-lock是基于MySQL的分布式锁简单实现，易于使用，保障系�
 - 构建一个基于MySQL的简单系统，要求高可用，并且易于维护；业务场景需要分布式锁，但是不想因为要使用分布式锁而引入Redis、Zookeeper等其他组件
 
 ## Out Of The Box 开箱即用
-将mysql-lock.properties数据库配置文件置于classpath下
+添加maven依赖
+```
+<dependency>
+    <groupId>com.github.zheng93775</groupId>
+    <artifactId>mysql-lock</artifactId>
+    <version>1.0.0</version>
+</dependency>
+```
+classpath下配置好mysql-lock.properties
 ```
 mysql-lock.url=jdbc:mysql://127.0.0.1:3306/test
 mysql-lock.username=db_user
 mysql-lock.password=db_pass
 ```
-然后在代码里就可以直接使用了
+代码里直接使用MLock
 ```
 MLock mLock = new MLock("DailyJob");
 try {
@@ -33,8 +41,7 @@ try {
 
 ## 详细介绍
 
-- [MLock使用介绍](https://github.com/zheng93775/mysql-lock/doc/MLock.md)
-- [配置属性列表](https://github.com/zheng93775/mysql-lock/doc/properties.md)
-- [自定义配置方式](https://github.com/zheng93775/mysql-lock/doc/config.md)
-- [表结构及原理](https://github.com/zheng93775/mysql-lock/doc/table.md)
+- [MLock使用介绍](https://github.com/zheng93775/mysql-lock/blob/master/doc/MLock.md)
+- [配置方式](https://github.com/zheng93775/mysql-lock/blob/master/doc/configure.md)
+- [表结构及原理介绍](https://github.com/zheng93775/mysql-lock/blob/master/doc/table.md)
 - [spring-boot-starter-mysql-lock 零配置使用方式 ](https://github.com/zheng93775/spring-boot-starter-mysql-lock/README.md)

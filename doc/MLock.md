@@ -23,16 +23,19 @@ parallelNum|可同时获得锁进入临界区的数量，有限并发锁，用�
  */
 public void lock()
 
+
 /**
  * 获取锁，如果当前锁不可用，每秒重复尝试，直到占有锁或者被打断
  */
-public void lockInterruptibly() throwsInterruptedException
+public void lockInterruptibly() throws InterruptedException
+
 
 /**
  * 尝试获取锁
  * @return 返回true代表已经获得锁，false代表获取锁失败（锁已经被别的进程占有）
  */
 public boolean tryLock()
+
 
 /**
  * 在指定的时间内，重复尝试获取锁，得到锁之后返回true
@@ -43,7 +46,8 @@ public boolean tryLock()
  * @return true代表得到锁，false代表在指定时间内获取不到锁
  * @throws InterruptedException
  */
-public boolean tryLock(long time, TimeUnit unit)throws InterruptedException
+public boolean tryLock(long time, TimeUnit unit) throws InterruptedException
+
 
 /**
  * 释放锁
