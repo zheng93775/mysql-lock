@@ -49,4 +49,4 @@ try {
 - [MLock使用介绍](https://github.com/zheng93775/mysql-lock/blob/master/doc/MLock.md)
 - [配置方式](https://github.com/zheng93775/mysql-lock/blob/master/doc/configure.md)
 - [表结构及原理介绍](https://github.com/zheng93775/mysql-lock/blob/master/doc/table.md)
-- [spring-boot-starter-mysql-lock 零配置使用方式 ](https://github.com/zheng93775/spring-boot-starter-mysql-lock/README.md)
+- [spring-boot-starter-mysql-lock 零配置使用方式 ](https://github.com/zheng93775/spring-boot-starter-mysql-lock/)
