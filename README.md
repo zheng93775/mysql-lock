@@ -20,6 +20,11 @@ mysql-lock是基于MySQL的分布式锁简单实现，易于使用，保障系�
     <artifactId>mysql-lock</artifactId>
     <version>1.0.0</version>
 </dependency>
+<dependency>
+    <groupId>mysql</groupId>
+    <artifactId>mysql-connector-java</artifactId>
+    <version>5.1.40</version>
+</dependency>
 ```
 classpath下配置好mysql-lock.properties
 ```

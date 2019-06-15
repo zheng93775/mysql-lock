@@ -12,8 +12,8 @@ public MLock(String lockKey, int expireSeconds, int parallelNum)
 参数|含义
 ---|---
 lockKey|锁唯一标识。不同的MLock对象，如果lockKey相同则意味着是同一把锁
-expireSeconds|允许持有锁的最长时间，单位为秒，过期之后其他执行线程可获得锁
-parallelNum|可同时获得锁进入临界区的数量，有限并发锁，用于限制同时执行的并发数
+expireSeconds|允许持有锁的最长时间，单位为秒，过期之后其他执行线程可获得锁，默认值为60
+parallelNum|可同时获得锁进入临界区的数量，有限并发锁，用于限制同时执行的并发数，默认值为1
 
 ### public方法
 
