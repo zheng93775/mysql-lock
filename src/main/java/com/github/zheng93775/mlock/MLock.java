@@ -87,8 +87,14 @@ public class MLock implements Lock {
      */
     @Override
     public boolean tryLock() {
+        String owner = ownerThreadLocal.get();
+        if (owner != null && !owner.equals(MLockManager.OPERATION_TRY_LOCK)) {
+            // already hold a lock
+            return true;
+        }
+
         ownerThreadLocal.set(MLockManager.OPERATION_TRY_LOCK);
-        String owner = UUID.randomUUID().toString();
+        owner = UUID.randomUUID().toString();
         int affectRows = MLockDao.getInstance().insert(lockKey, owner, expireSeconds, parallelNum);
         if (affectRows > 0) {
             ownerThreadLocal.set(owner);
